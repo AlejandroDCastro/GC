@@ -56,21 +56,21 @@ void main()
 
         if (u_Luz0>0) {                                     // Si la luz 0 esta encendida se calcula la intesidad difusa de L
             diffuse = max(dot(N, L0), 0.0);		            // Calculo de la int. difusa
-            // C�lculo de la atenuacion
+            // Calculo de la atenuacion
             float attenuation0 = 80.0/(0.25+(0.01*d0)+(0.003*d0*d0));
 
             resultado += diffuse*attenuation0*u_Light0_i;
         }
         if (u_Luz1>0) {                                     // Si la luz 1 esta encendida se calcula la intesidad difusa de L
-            diffuse = max(dot(N, L1), 0.0);		            // C�lculo de la int. difusa
-            // C�lculo de la atenuacion
+            diffuse = max(dot(N, L1), 0.0);		            // Calculo de la int. difusa
+            // Calculo de la atenuacion
             float attenuation1 = 80.0/(0.25+(0.01*d1)+(0.003*d1*d1));
 
             resultado += diffuse*attenuation1*u_Light1_i;
         }
         if (u_Luz2>0) {                                     // Si la luz 2 esta encendida se calcula la intesidad difusa de L
             diffuse = max(dot(N, L2), 0.0);		            // Calculo de la int. difusa
-            // C�lculo de la atenuacion
+            // Calculo de la atenuacion
             float attenuation2 = 80.0/(0.25+(0.01*d2)+(0.003*d2*d2));
 
             resultado += diffuse*attenuation2*u_Light2_i;

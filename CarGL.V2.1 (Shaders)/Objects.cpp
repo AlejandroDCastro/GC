@@ -24,17 +24,17 @@
 GLfloat light0_ambient_c[4]  = {   0.2f,   0.2f,  0.2f, 1.0f };
 GLfloat light0_diffuse_c[4]  = {   0.8f,   0.8f,  0.8f, 1.0f };
 GLfloat light0_specular_c[4] = {   1.0f,   1.0f,  1.0f, 1.0f };
-GLfloat light0_position_c[4] = {-10.0f, -10.0f, -30.0f, 1.0f };
+GLfloat light0_position_c[4] = {-40.0f, 50.0f, 40.0f, 1.0f };
 
 GLfloat light1_ambient_c[4]  = {   0.2f,   0.2f,  0.2f, 1.0f };
 GLfloat light1_diffuse_c[4]  = {   0.8f,   0.8f,  0.8f, 1.0f };
 GLfloat light1_specular_c[4] = {   1.0f,   1.0f,  1.0f, 1.0f };
-GLfloat light1_position_c[4] = {   0.0f, 100.0f,  0.0f, 1.0f };
+GLfloat light1_position_c[4] = {   -50.0f, 50.0f,  0.0f, 1.0f };
 
 GLfloat light2_ambient_c[4]  = {   0.2f,   0.2f,  0.2f, 1.0f };
 GLfloat light2_diffuse_c[4]  = {   0.8f,   0.8f,  0.8f, 1.0f };
 GLfloat light2_specular_c[4] = {   1.0f,   1.0f,  1.0f, 1.0f };
-GLfloat light2_position_c[4] = {   80.0f, 100.0f,  -20.0f, 1.0f };
+GLfloat light2_position_c[4] = {   40.0f, 50.0f,  40.0f, 1.0f };
 
 GLfloat mat_ambient_c[4]    = { 0.7f, 0.7f, 0.7f, 1.0f };
 GLfloat mat_diffuse_c[4]    = { 0.8f, 0.8f, 0.8f, 1.0f };
@@ -301,7 +301,7 @@ void __fastcall TPrimitiva::Render(int seleccion, bool reflejo)
             break;
         }
         case EDIFICIO_ID: {
-            if (escena.show_aceramanzana) {
+            if (escena.show_edificio) {
                 glUniform4fv(escena.uColorLocation, 1, (const GLfloat *) colores[0]);
 
                 // Asociamos los vértices y sus normales
@@ -323,7 +323,7 @@ void __fastcall TPrimitiva::Render(int seleccion, bool reflejo)
             break;
         }
         case FAROLA_ID: {
-            if (escena.show_aceramanzana) {
+            if (escena.show_farola) {
                 glUniform4fv(escena.uColorLocation, 1, (const GLfloat *) colores[0]);
 
                 // Asociamos los vértices y sus normales
@@ -345,7 +345,7 @@ void __fastcall TPrimitiva::Render(int seleccion, bool reflejo)
             break;
         }
         case SEMAFORO_ID: {
-            if (escena.show_aceramanzana) {
+            if (escena.show_semaforo) {
                 glUniform4fv(escena.uColorLocation, 1, (const GLfloat *) colores[0]);
 
                 // Asociamos los vértices y sus normales
@@ -367,7 +367,7 @@ void __fastcall TPrimitiva::Render(int seleccion, bool reflejo)
             break;
         }
         case ROCAS_ID: {
-            if (escena.show_aceramanzana) {
+            if (escena.show_rocas) {
                 glUniform4fv(escena.uColorLocation, 1, (const GLfloat *) colores[0]);
 
                 // Asociamos los vértices y sus normales
@@ -389,7 +389,7 @@ void __fastcall TPrimitiva::Render(int seleccion, bool reflejo)
             break;
         }
         case PUENTE_ID: {
-            if (escena.show_aceramanzana) {
+            if (escena.show_puente) {
                 glUniform4fv(escena.uColorLocation, 1, (const GLfloat *) colores[0]);
 
                 // Asociamos los vértices y sus normales
@@ -411,7 +411,7 @@ void __fastcall TPrimitiva::Render(int seleccion, bool reflejo)
             break;
         }
         case CASA_ID: {
-            if (escena.show_aceramanzana) {
+            if (escena.show_casa) {
                 glUniform4fv(escena.uColorLocation, 1, (const GLfloat *) colores[0]);
 
                 // Asociamos los vértices y sus normales
